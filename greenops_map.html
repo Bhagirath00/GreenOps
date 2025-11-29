@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_370eb37d6bbbe55d66292ed8a19a5322 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_370eb37d6bbbe55d66292ed8a19a5322" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_370eb37d6bbbe55d66292ed8a19a5322 = L.map(
+                "map_370eb37d6bbbe55d66292ed8a19a5322",
+                {
+                    center: [50.0, 5.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_73a24ca102a77a51a86af2fc5ffdfba5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_73a24ca102a77a51a86af2fc5ffdfba5.addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var marker_1fe820d0eff8f5da8436a2208c63ee5f = L.marker(
+                [51.5, -0.12],
+                {
+}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var icon_463b9225effe1e0a41403e3b160d9ad8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3107542083a45e8bc277e7ce387a0f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ffc2f7cc3c486c56984b4f7edb72529 = $(`<div id="html_5ffc2f7cc3c486c56984b4f7edb72529" style="width: 100.0%; height: 100.0%;"><b>UK-South (London)</b><br>Status: GREEN<br>Carbon: 90g</div>`)[0];
+                popup_d3107542083a45e8bc277e7ce387a0f4.setContent(html_5ffc2f7cc3c486c56984b4f7edb72529);
+            
+        
+
+        marker_1fe820d0eff8f5da8436a2208c63ee5f.bindPopup(popup_d3107542083a45e8bc277e7ce387a0f4)
+        ;
+
+        
+    
+    
+                marker_1fe820d0eff8f5da8436a2208c63ee5f.setIcon(icon_463b9225effe1e0a41403e3b160d9ad8);
+            
+    
+            var poly_line_3f3f0b2d6cd3c82ac9dea6ea04eb7888 = L.polyline(
+                [[51.5, -0.12], [51.5, -0.12]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var marker_f0c0064629e5ee6bc9ac8b32b9ea902b = L.marker(
+                [50.11, 8.68],
+                {
+}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var icon_9ebcc71114995b33f7341ae722e88c17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1a55a364fb5be8601a4d77831527d4e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc17a7acd0203eb6633ef66f1ec00bba = $(`<div id="html_cc17a7acd0203eb6633ef66f1ec00bba" style="width: 100.0%; height: 100.0%;"><b>EU-Central (Frankfurt)</b><br>Status: DIRTY<br>Carbon: 340g</div>`)[0];
+                popup_1a55a364fb5be8601a4d77831527d4e3.setContent(html_cc17a7acd0203eb6633ef66f1ec00bba);
+            
+        
+
+        marker_f0c0064629e5ee6bc9ac8b32b9ea902b.bindPopup(popup_1a55a364fb5be8601a4d77831527d4e3)
+        ;
+
+        
+    
+    
+                marker_f0c0064629e5ee6bc9ac8b32b9ea902b.setIcon(icon_9ebcc71114995b33f7341ae722e88c17);
+            
+    
+            var poly_line_9921fe77555a4fe8bd0fa93a2db07aed = L.polyline(
+                [[51.5, -0.12], [50.11, 8.68]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var marker_d9e07fd272b230d7494fe6640c74daeb = L.marker(
+                [48.85, 2.35],
+                {
+}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var icon_35d4c8e582f3988043976876dbb7b498 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa06d79f389c15b409512d2da6f392b3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9563b6bcca4597c5cb0da33d4dd67499 = $(`<div id="html_9563b6bcca4597c5cb0da33d4dd67499" style="width: 100.0%; height: 100.0%;"><b>EU-West (Paris)</b><br>Status: GREEN<br>Carbon: 55g</div>`)[0];
+                popup_fa06d79f389c15b409512d2da6f392b3.setContent(html_9563b6bcca4597c5cb0da33d4dd67499);
+            
+        
+
+        marker_d9e07fd272b230d7494fe6640c74daeb.bindPopup(popup_fa06d79f389c15b409512d2da6f392b3)
+        ;
+
+        
+    
+    
+                marker_d9e07fd272b230d7494fe6640c74daeb.setIcon(icon_35d4c8e582f3988043976876dbb7b498);
+            
+    
+            var poly_line_28c99d3b130e960e57eaf22626dfce17 = L.polyline(
+                [[51.5, -0.12], [48.85, 2.35]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var marker_44c4f874686d9cd7bae5e6f81fd39cea = L.marker(
+                [39.04, -77.48],
+                {
+}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+    
+            var icon_08cd79ac67ecb5e0b2ddec310c7791e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_816d1f0557a8681b39e6fa984c7faff3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7bc19f4fd334e9f586dd200ad7fcd78 = $(`<div id="html_a7bc19f4fd334e9f586dd200ad7fcd78" style="width: 100.0%; height: 100.0%;"><b>US-East (N. Virginia)</b><br>Status: MODERATE<br>Carbon: 210g</div>`)[0];
+                popup_816d1f0557a8681b39e6fa984c7faff3.setContent(html_a7bc19f4fd334e9f586dd200ad7fcd78);
+            
+        
+
+        marker_44c4f874686d9cd7bae5e6f81fd39cea.bindPopup(popup_816d1f0557a8681b39e6fa984c7faff3)
+        ;
+
+        
+    
+    
+                marker_44c4f874686d9cd7bae5e6f81fd39cea.setIcon(icon_08cd79ac67ecb5e0b2ddec310c7791e8);
+            
+    
+            var poly_line_17ff8eb01d0e8b5c5fdd0d0b37d4fe9e = L.polyline(
+                [[51.5, -0.12], [39.04, -77.48]],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cyan", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.3, "smoothFactor": 1.0, "stroke": true, "weight": 0.5}
+            ).addTo(map_370eb37d6bbbe55d66292ed8a19a5322);
+        
+</script>
+</html>
