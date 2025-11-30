@@ -108,7 +108,8 @@ We welcome contributions from the community! Whether it's fixing bugs, adding ne
 
 
 ## License
-Distributed under the [MIT License](LICENSE). See `LICENSE` for more information.
+Distributed under the [License](LICENSE)  See for more information.
+
 ---
 
 <div align="center">
