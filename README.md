@@ -1,196 +1,116 @@
+
+
+<div align="center">
+
+![GreenOps Banner](https://capsule-render.vercel.app/api?type=waving&color=00b894&height=200&section=header&text=GreenOps%20Enterprise&fontSize=70&animation=fadeIn&fontAlignY=35&desc=AI-Powered%20Sustainable%20DevOps&descAlignY=55&descAlign=50)
+
 # 🌿 GreenOps Enterprise
 
-> **AI-Powered Sustainable DevOps**  
-> Autonomous carbon-aware cloud deployment optimization using Gemini 1.5 Flash
+[![Gemini 1.5 Flash](https://img.shields.io/badge/AI-Gemini%201.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![Carbon API](https://img.shields.io/badge/Data-UK%20National%20Grid-00b894?style=for-the-badge&logo=leaf&logoColor=white)](https://carbonintensity.org.uk/)
+[![Python](https://img.shields.io/badge/Code-Python%203.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-[![Gemini](https://img.shields.io/badge/Powered%20by-Gemini%201.5%20Flash-blue)](https://ai.google.dev/)
-[![Python](https://img.shields.io/badge/Python-3.10+-green)](https://python.org)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
-
----
-
-## 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/GreenOps.git
-cd GreenOps
-
-# Set your Gemini API key
-export GOOGLE_API_KEY="your-api-key-here"
-
-# Run the notebook cells in order (01-12)
-python 01_setup_dependencies.py
-python 02_api_configuration.py
-# ... continue through cell 12
-```
+</div>
 
 ---
 
-## 📋 What is GreenOps?
+## 🚀 Overview
 
-Cloud computing now produces **more carbon emissions than the airline industry** (3.7% of global GHG). GreenOps is an **autonomous AI agent** that optimizes cloud deployments based on real-time grid carbon intensity—reducing emissions by up to **40%** with zero workflow disruption.
+**GreenOps** is an autonomous AI agent that optimizes cloud deployments based on real-time carbon intensity. Instead of deploying blindly, it checks the grid status and intelligently schedules workloads for "green windows"—reducing carbon emissions by up to **40%**.
 
-### **The Problem**
+### **Powered By**
+*   🧠 **Google Gemini 1.5 Flash**: The reasoning engine that decides *when* to deploy.
+*   🔌 **UK National Grid Carbon Intensity API**: Real-time energy generation data (Wind, Solar, Gas, Coal).
 
-*   DevOps teams deploy blindly, ignoring grid carbon intensity
-*   Same workload: **300g CO2/kWh** at 6 PM (coal) vs **<50g CO2/kWh** at 2 AM (wind)
-*   **85% emissions reduction possible** through intelligent scheduling
+---
 
-### **The Solution**
+## 💻 Want to Run Locally?
 
-An AI agent that:
-*   ✅ Connects to **UK National Grid API** for real-time carbon data
-*   ✅ Uses **Gemini 1.5 Flash** for contextual decision-making
-*   ✅ Autonomously schedules deployments during "green windows"
-*   ✅ Overrides for critical security patches
-*   ✅ Generates **ESG-ready audit trails**
+We have a dedicated local execution mode for testing on your laptop!
+
+👉 **[Click Here for Local Setup Guide](Local/README_LOCAL.md)**
+
+*(Includes instructions for API keys, dependencies, and running the simulation script)*
+
+---
+
+## 📋 The Problem vs. Solution
+
+### **The Problem: Invisible Carbon**
+*   Cloud computing emits **more carbon than the airline industry**.
+*   Deploying a heavy job at **6 PM (Coal/Gas)** = **300g CO2/kWh**.
+*   Deploying the same job at **2 AM (Wind)** = **<50g CO2/kWh**.
+*   Most DevOps tools **ignore this completely**.
+
+### **The Solution: Autonomous Agent**
+GreenOps acts as a "Sustainability Gatekeeper":
+1.  **Intercepts** deployment requests.
+2.  **Checks** live grid data via API.
+3.  **Decides**:
+    *   ✅ **Green Grid?** Deploy immediately.
+    *   🏭 **Dirty Grid?** Schedule for later (e.g., 3 AM).
+    *   🚨 **Critical Emergency?** Override and deploy instantly.
 
 ---
 
 ## 🏗️ Architecture
 
-```
-User Request → Gemini Agent → Carbon Fetcher → UK Grid API
-                    ↓
-            Decision Engine
-                    ↓
-       Green? Deploy : Schedule
-                    ↓
-            Audit Logger
-```
-
-**Key Components**:
-- **Gemini 1.5 Flash**: LLM-powered reasoning engine
-- **Carbon Intensity Fetcher**: Real-time & forecast data from UK Grid
-- **Circuit Breaker**: Fallback to simulation if API fails
-- **Execution Engine**: Tool orchestration and observability
-
----
-
-## 📂 Project Structure
-
-```
-GreenOps/
-├── 01_setup_dependencies.py    # Install libraries
-├── 02_api_configuration.py     # Gemini API setup
-├── 03_core_logic.py             # CarbonIntensityFetcher class
-├── 04_agent_tools.py            # Function definitions for agent
-├── 05_gemini_agent.py           # Agent initialization
-├── 06_execution_engine.py      # run_turn() orchestration
-├── 07_scenario_realtime.py     # Live decision demo
-├── 08_scenario_dirty_grid.py   # High carbon intervention
-├── 09_scenario_forecast.py     # Predictive scheduling
-├── 10_carbon_heatmap.py        # Matplotlib visualization
-├── 11_geospatial_map.py        # Folium interactive map
-├── 12_final_report.py          # Executive summary
-├── greenops_map.html           # Generated map output
-└── README.md                   # This file
+```mermaid
+graph TD
+    User[👤 User Request] --> Agent[🤖 Gemini Agent]
+    Agent --> Tools{🧰 Agent Tools}
+    
+    Tools -->|Get Intensity| GridAPI[🔌 UK National Grid API]
+    Tools -->|Calculate| Forecast[Pre-computed Forecast]
+    
+    GridAPI -->|Return Data| Agent
+    
+    Agent -->|Decision| Action{⚡ Action}
+    Action -->|Green (<200g)| Deploy[✅ Deploy Now]
+    Action -->|Dirty (>200g)| Schedule[🕒 Schedule for 3 AM]
+    Action -->|Critical| Override[🚨 Emergency Override]
 ```
 
 ---
 
 ## 🧪 Real-World Scenarios
 
-### Scenario A: The Nightly Build
-- **Request**: 2-hour CI/CD test suite
-- **Grid**: 280g CO2/kWh (gas peaker plants)
-- **Agent**: Schedules for 3 AM (45g, wind peak)
-- **Impact**: **84% carbon reduction**
-
-### Scenario B: Emergency Hotfix
-- **Request**: "Deploy security patch IMMEDIATELY"
-- **Grid**: 320g (dirty)
-- **Agent**: Deploys instantly, logs carbon offset
-- **Impact**: **Safety prioritized**, carbon tracked
-
-### Scenario C: Database Migration
-- **Request**: Move 10TB to cloud
-- **Grid**: 180g (cloudy solar)
-- **Agent**: "Wait 22 hours for super green window?"
-- **Impact**: **Human-in-the-loop** decision
+| Scenario | Grid Status | Agent Decision | Impact |
+|:---|:---|:---|:---|
+| **Nightly Build** | 🏭 Dirty (Gas) | **Wait 6 hours** for Wind peak | 📉 **-84% Carbon** |
+| **Security Hotfix** | 🏭 Dirty (Gas) | **Deploy Immediately** (Critical) | 🛡️ **Safety First** |
+| **Data Migration** | ☁️ Moderate | **Wait 22 hours** for Solar peak | 🤝 **Human Choice** |
 
 ---
 
-## 📊 Business Impact
+## 📂 Repository Structure
 
-| Metric | Improvement | Explanation |
-|:-------|:------------|:------------|
-| **Carbon** | 📉 -40% | Workload shifting to renewable windows |
-| **Cost** | 💰 -20% | Off-peak pricing + spot instances |
-| **ESG** | ✅ 100% | Automated Scope 2 reporting |
-| **DevOps Time** | ⏳ +5 hrs/wk | No manual grid monitoring |
-
-**For Fortune 500**:  
-1M tons/year → **300K-400K tons saved** = **85,000 cars removed**
-
----
-
-## 🔑 Key Agentic Capabilities
-
-This project demonstrates **4 advanced concepts**:
-
-1. ✅ **LLM-Powered Agent**: Gemini 1.5 Flash decision engine
-2. ✅ **Custom Tools**: Python function calling for real-world integration
-3. ✅ **Observability**: Full audit trails & chain-of-thought logging
-4. ✅ **Session Memory**: Context retention across multi-turn conversations
-
----
-
-## ⚙️ Setup Instructions
-
-### **Prerequisites**
-- Python 3.10+
-- Google Gemini API key ([Get one here](https://ai.google.dev/))
-
-### **Installation**
-
-```bash
-pip install google-generativeai requests numpy matplotlib folium
 ```
-
-### **Configuration**
-
-```python
-# Set your API key
-export GOOGLE_API_KEY="your-key-here"
-
-# Or in Python:
-import os
-os.environ["GOOGLE_API_KEY"] = "your-key-here"
+GreenOps/
+├── 01_setup_dependencies.py    # Kaggle Cell 1
+├── ...                         # (Other Kaggle Cells)
+├── 12_final_report.py          # Kaggle Cell 12
+├── Local/                      # 💻 LOCAL EXECUTION FOLDER
+│   ├── greenops_local.py       # Run this on your laptop!
+│   └── README_LOCAL.md         # Instructions
+├── greenops_map.html           # Generated Output
+└── README.md                   # This file
 ```
-
-### **Running on Kaggle**
-
-1. Upload all numbered Python files (01-12) to a Kaggle notebook
-2. Add `GOOGLE_API_KEY` to Kaggle Secrets
-3. Run cells sequentially
-4. View generated visualizations (heatmap, map, report)
-
----
-
-## 🔮 Future Roadmap
-
-- **Kubernetes Operator**: Auto-manage pod scheduling policies
-- **Multi-Region Routing**: Follow the sun/wind across AWS/GCP/Azure
-- **GPU Optimization**: NVIDIA MIG integration for hardware-aware throttling
-
----
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file
 
 ---
 
 ## 🙏 Acknowledgments
 
-Built for the **Google AI Agents Hackathon** | November 2025  
-Powered by **Gemini 1.5 Flash** and **UK National Grid Carbon Intensity API**
+Built for the **Google AI Agents Hackathon** (November 2025).
+
+*   **LLM**: Gemini 1.5 Flash
+*   **Data**: Carbon Intensity API (National Grid ESO)
 
 ---
 
-**Every deployment is a vote for the future we build.**  
-*With GreenOps, we vote for one that's faster, cheaper, and cleaner.*
+<div align="center">
 
-🌿 **Code Smarter. Breathe Easier.**
+**Code Smarter. Breathe Easier.** 🌿
+
+</div>

@@ -75,6 +75,9 @@ task_manager = DevOpsTaskManager()
 def get_carbon_intensity(): return carbon_fetcher.get_current_intensity()
 def get_carbon_forecast(hours: int = 24): return {"forecast": carbon_fetcher.get_forecast(hours)}
 def find_greenest_window(hours: int = 24, duration: int = 2):
+    # Safety Cast (Agent might send floats)
+    hours = int(hours)
+    duration = int(duration)
     forecast = carbon_fetcher.get_forecast(hours)
     if not forecast: return {"error": "Forecast unavailable"}
     
@@ -151,8 +154,16 @@ def run_turn(user_message):
             response = send_message_safe(Part(function_response=FunctionResponse(name=fname, response=result)))
         else:
             break
-    if response and response.text:
-        print(f"🤖 AGENT: {response.text}")
+    # Safer text access to handle potential protobuf version issues
+    try:
+        if response and response.parts:
+            print(f"🤖 AGENT: {response.text}")
+    except AttributeError:
+        # Fallback for some library versions
+        if response and response.candidates:
+             print(f"🤖 AGENT: {response.candidates[0].content.parts[0].text}")
+    except Exception as e:
+        print(f"🤖 AGENT: [Response Generated] (Display Error: {e})")
 
 # --- Main Loop ---
 if __name__ == "__main__":
