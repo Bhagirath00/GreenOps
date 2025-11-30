@@ -1,0 +1,6 @@
+google-generativeai
+requests
+numpy
+matplotlib
+folium
+ipython
