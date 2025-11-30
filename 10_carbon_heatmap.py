@@ -22,7 +22,7 @@ def create_heatmap_visual():
     plt.style.use('dark_background') # Cyberpunk / DevOps look
     
     # Gradient Fill Logic
-    # We plot segments to simulate a gradient from Green to Red
+    # plot segments to simulate a gradient from Green to Red
     for i in range(len(hours)-1):
         x = hours[i:i+2]
         y = intensity[i:i+2]
