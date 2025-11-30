@@ -1,4 +1,4 @@
-# Cell 7: Run Full Enterprise Simulation
+# Cell 7: Run Enterprise Simulation
 
 # Turn 1: Check status for a standard job
 # This forces the agent to check the live grid
