@@ -17,8 +17,8 @@
 **GreenOps** is an autonomous AI agent that optimizes cloud deployments based on real-time carbon intensity. Instead of deploying blindly, it checks the grid status and intelligently schedules workloads for "green windows"—reducing carbon emissions by up to **40%**.
 
 ### **Powered By**
-*   🧠 **Google Gemini 1.5 Flash**: The reasoning engine that decides *when* to deploy.
-*   🔌 **UK National Grid Carbon Intensity API**: Real-time energy generation data (Wind, Solar, Gas, Coal).
+*    **Google Gemini 1.5 Flash**: The reasoning engine that decides *when* to deploy.
+*    **UK National Grid Carbon Intensity API**: Real-time energy generation data (Wind, Solar, Gas, Coal).
 
 
 
@@ -80,7 +80,7 @@ Built for the **Google AI Agents Hackathon** (November 2025).
 
 
 
-## 🔮 Future Improvement
+##  Future Improvement
 
 We are building the future of sustainable DevOps. Here is what's coming next:
 
@@ -107,13 +107,9 @@ We welcome contributions from the community! Whether it's fixing bugs, adding ne
 
 
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-
+## License
+Distributed under the [MIT License](LICENSE). See `LICENSE` for more information.
+---
 
 <div align="center">
 
