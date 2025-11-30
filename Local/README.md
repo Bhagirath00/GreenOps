@@ -1,4 +1,4 @@
-# 💻 Running GreenOps Locally
+#  Run GreenOps Locally
 
 This folder contains everything you need to run the GreenOps agent on your own machine.
 
@@ -9,7 +9,7 @@ This folder contains everything you need to run the GreenOps agent on your own m
 
 ---
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 ### 1. Install Dependencies
 Open your terminal in this folder and run:
@@ -45,7 +45,7 @@ python greenops_local.py
 
 ---
 
-## 📝 What to Expect
+##  What to Expect
 
 The script will:
 1.  **Connect** to the real UK National Grid API.
@@ -53,7 +53,7 @@ The script will:
 3.  **Print** the agent's reasoning and decisions in real-time.
 
 **Example Output:**
-> 🤖 AGENT: The current carbon intensity is 68g (Green). Deploying immediately! 🌿
+> 🤖 AGENT: The current carbon intensity is 68g (Green). Deploying immediately! 
 
 ---
 

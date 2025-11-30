@@ -14,8 +14,8 @@ def get_available_model(tools, system_instruction):
         
         print(f"   📋 Found {len(available_models)} models: {available_models}")
         
-        # Priority List (We prefer Flash, then Pro, then anything else)
-        # We look for partial matches in the available list
+        # Priority List (prefer Flash, then Pro, then anything else)
+        # look for partial matches in the available list
         priority_keywords = ['flash', 'pro', 'gemini']
         
         selected_model_name = None

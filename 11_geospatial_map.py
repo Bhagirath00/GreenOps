@@ -44,5 +44,3 @@ def create_geo_map():
 
 # Run it
 map_file = create_geo_map()
-# Note: In Kaggle, you usually download HTML files to view them, 
-# but this confirms generation is successful.

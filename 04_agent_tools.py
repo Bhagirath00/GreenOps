@@ -1,4 +1,4 @@
-# Cell 4: Define Enterprise Agent Tools (Fixed Return Types)
+# Cell 4: Define Enterprise Agent Tools 
 
 def get_carbon_intensity():
     return carbon_fetcher.get_current_intensity()
@@ -9,7 +9,7 @@ def get_carbon_forecast(hours: int = 24):
 def find_greenest_window(hours: int = 24, duration: int = 2):
     forecast = carbon_fetcher.get_forecast(hours)
     
-    # FIX: Ensure we return a Dict, not a String
+    # FIX: Ensure to return a Dict, not a String
     if not forecast or "error" in forecast[0]:
         return {"error": "Forecast unavailable, using current data fallback."}
         

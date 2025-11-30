@@ -4,7 +4,7 @@ from kaggle_secrets import UserSecretsClient
 try:
     user_secrets = UserSecretsClient()
     # Ensure your Secret is named 'GEMINI_API_KEY' or 'GOOGLE_API_KEY'
-    # We check for both to be safe
+    # try to check for both to be safe
     try:
         api_key = user_secrets.get_secret("GEMINI_API_KEY")
     except:

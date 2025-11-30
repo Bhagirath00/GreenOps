@@ -4,7 +4,7 @@ print("="*60)
 print("🧪 TEST SCENARIO 3: Future Intelligence")
 print("="*60)
 
-# We ask the agent to prove its work by showing the data
+# ask the agent to prove its work by showing the data
 user_request = "Can you show me the Carbon Forecast for the next 24 hours? I want to see the data."
 
 run_turn(user_request)

@@ -1,4 +1,4 @@
-# Cell 6: The Main Execution Engine (Improved Logging)
+# Cell 6: The Main Execution Engine 
 
 def run_turn(user_message):
     print("\n" + "=" * 60)

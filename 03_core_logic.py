@@ -1,4 +1,4 @@
-# Cell 3: Logic Classes (Fixed Forecast)
+# Cell 3: Logic Classes 
 
 class CarbonIntensityFetcher:
     """Fetches REAL-TIME carbon intensity from UK National Grid API."""
@@ -7,7 +7,7 @@ class CarbonIntensityFetcher:
     def get_current_intensity(self) -> Dict:
         """Get current carbon intensity for UK."""
         try:
-            # 1. Try Real API
+            # 1.  Real API
             response = requests.get(f"{self.BASE_URL}/intensity", timeout=5)
             data = response.json()["data"][0]
             print(f"   📡 [API] Fetched Real-Time Intensity: {data['intensity']['actual']} gCO2/kWh")
@@ -23,7 +23,7 @@ class CarbonIntensityFetcher:
     
     def get_forecast(self, hours: int = 24) -> List[Dict]:
         """Get carbon intensity forecast for next N hours."""
-        hours = int(hours) # Safety Cast
+        hours = int(hours) 
         try:
             # 1. Try Real API (Correct Endpoint)
             response = requests.get(f"{self.BASE_URL}/intensity/forecast", timeout=5)
