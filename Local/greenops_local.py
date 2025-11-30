@@ -75,7 +75,7 @@ task_manager = DevOpsTaskManager()
 def get_carbon_intensity(): return carbon_fetcher.get_current_intensity()
 def get_carbon_forecast(hours: int = 24): return {"forecast": carbon_fetcher.get_forecast(hours)}
 def find_greenest_window(hours: int = 24, duration: int = 2):
-    # Safety Cast (Agent might send floats)
+    # Safety Cast 
     hours = int(hours)
     duration = int(duration)
     forecast = carbon_fetcher.get_forecast(hours)
