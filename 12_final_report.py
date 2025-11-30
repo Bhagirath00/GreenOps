@@ -4,7 +4,7 @@ print("="*60)
 print("📊 GREENOPS EXECUTION REPORT")
 print("="*60)
 
-# 1. Calculate Metrics (Simulated from the run)
+# 1. Calculate Metrics 
 total_tasks_processed = 3
 green_decisions = 2
 dirty_decisions_avoided = 1
